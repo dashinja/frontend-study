@@ -103,6 +103,8 @@ body {
 .dragonball-star {
   margin: 250px;
   position: relative;
+  right: 210px;
+  bottom: 150px;
   display: block;
   color: red;
   width: 0px;
@@ -110,7 +112,8 @@ body {
   border-right: 100px solid transparent;
   border-bottom: 70px solid red;
   border-left: 100px solid transparent;
-  transform: rotate(35deg);
+  transform: scale(0.18)
+
 }
 
 .dragonball-star:before {
