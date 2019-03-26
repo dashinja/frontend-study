@@ -1,12 +1,16 @@
 $dragonball-color-light: rgb(255, 195, 82);
 $dragonball-color-dark: rgb(221, 144, 2);
 
-body {
-  display: relative;
-  margin: 0;
-  padding: 0;
-  background-color: #e2e2e2;
-}
+// @mixin linearBackground() {
+//   background: linear-gradient($turnDeg, $colors);
+// }
+
+// @include linearBackgrond() body {
+//   display: relative;
+//   margin: 0;
+//   padding: 0;
+//   background-color: #e2e2e2;
+// }
 
 .dragonball-container {
   position: absolute;
@@ -29,81 +33,79 @@ body {
     $dragonball-color-light,
     $dragonball-color-dark
   );
-}
 
-.dragonball-glare:nth-of-type(1) {
-  position: absolute;
-  right: 30px;
-  top: 56px;
-  width: 70px;
-  height: 110px;
-  background: #d4d2d2e5;
-  border-radius: 100%;
-  opacity: 0.5;
-  transform: rotate(-20deg);
-  filter: blur(07px);
-}
+  &__glare:nth-of-type(1) {
+    position: absolute;
+    right: 30px;
+    top: 56px;
+    width: 70px;
+    height: 110px;
+    background: #d4d2d2e5;
+    border-radius: 100%;
+    opacity: 0.5;
+    transform: rotate(-20deg);
+    filter: blur(07px);
+  }
 
-.dragonball-glare:nth-of-type(2) {
-  position: absolute;
-  left: 70px;
-  top: -7px;
-  width: 60px;
-  height: 100px;
-  background: #d4d2d2e5;
-  border-radius: 100%;
-  opacity: 0.9;
-  transform: rotate(70deg);
-  // filter: blur(2px);
-  background-image: linear-gradient(0.18turn, #ffffff, rgb(255, 178, 35));
-}
+  &__glare:nth-of-type(2) {
+    position: absolute;
+    left: 70px;
+    top: -7px;
+    width: 60px;
+    height: 100px;
+    background: #d4d2d2e5;
+    border-radius: 100%;
+    opacity: 0.9;
+    transform: rotate(70deg);
+    background-image: linear-gradient(0.18turn, #ffffff, rgb(255, 178, 35));
+  }
 
-.dragonball-glare:nth-of-type(3) {
-  position: absolute;
-  left: 17.5px;
-  top: 65px;
-  width: 40px;
-  height: 70px;
-  background: #d4d2d2e5;
-  border-radius: 100%;
-  opacity: 0.9;
-  transform: rotate(23deg);
-  // filter: blur(2px);
-  background-image: linear-gradient(0.35turn, #ffffff, rgb(255, 178, 35));
-}
+  &__glare:nth-of-type(3) {
+    position: absolute;
+    left: 17.5px;
+    top: 65px;
+    width: 40px;
+    height: 70px;
+    background: #d4d2d2e5;
+    border-radius: 100%;
+    opacity: 0.9;
+    transform: rotate(23deg);
+    background-image: linear-gradient(0.35turn, #ffffff, rgb(255, 178, 35));
+  }
 
-.dragonball-glare:nth-of-type(4) {
-  position: absolute;
-  right: 70px;
-  bottom: 5px;
-  width: 35px;
-  height: 70px;
-  background: #d4d2d2e5;
-  border-radius: 100%;
-  opacity: 0.9;
-  transform: rotate(70deg);
-  filter: blur(2px);
-  background-image: linear-gradient(0.7turn, #ffffff, rgb(255, 178, 35));
-}
+  &__glare:nth-of-type(4) {
+    position: absolute;
+    right: 70px;
+    bottom: 5px;
+    width: 35px;
+    height: 70px;
+    background: #d4d2d2e5;
+    border-radius: 100%;
+    opacity: 0.9;
+    transform: rotate(70deg);
+    filter: blur(2px);
+    background-image: linear-gradient(0.7turn, #ffffff, rgb(255, 178, 35));
+  }
 
-.dragonball-glare:nth-of-type(5) {
-  position: absolute;
-  right: 30px;
-  bottom: 55px;
-  width: 25px;
-  height: 40px;
-  background: #d4d2d2e5;
-  border-radius: 100%;
-  opacity: 0.9;
-  transform: rotate(40deg);
-  filter: blur(2.5px);
-  background-image: linear-gradient(0.75turn, #ffffff, rgb(255, 178, 35));
+  &__glare:nth-of-type(5) {
+    position: absolute;
+    right: 30px;
+    bottom: 55px;
+    width: 25px;
+    height: 40px;
+    background: #d4d2d2e5;
+    border-radius: 100%;
+    opacity: 0.9;
+    transform: rotate(40deg);
+    filter: blur(2.5px);
+    background-image: linear-gradient(0.75turn, #ffffff, rgb(255, 178, 35));
+  }
 }
 
 .dragonball-star {
   margin: 250px;
   position: relative;
-  right: 210px;
+  right: 205px;
   bottom: 150px;
   display: block;
   color: red;
@@ -130,6 +132,7 @@ body {
 }
 
 .dragonball-star:after {
+  content: '';
   position: absolute;
   display: block;
   color: red;
@@ -141,5 +144,4 @@ body {
   border-bottom: 70px solid red;
   border-left: 100px solid transparent;
   transform: rotate(-70deg);
-  content: '';
 }
